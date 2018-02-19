@@ -1,23 +1,78 @@
 # HOLE 1: Sum an array
 # Create a method that takes in an array sums the array then returns the array and the sum.
 
-def sum(i) 
-  i.inject(:+)
-end 
-my_arr = [2,4]
-puts sum(my_arr)
+# def sum(i) 
+#   i.inject(:+)
+# end 
+# my_arr = [2,4]
+# puts sum(my_arr)
 
 
 # HOLE 2: Rock paper scissors
 # Takes a user input the computer randomly chooses and the winner is output to the screen.
 
+# CHEATING METHO (HINT - Check Devin's submission)
+
+    # def rps_cheat
+    #   c = ['r','p','s'].sample
+    #   w =['Win','Lose','Tie'].sample
+    #   puts "choose r, p or s"
+    #   gets
+    #   puts w
+    # end  
+
+    # rps_cheat
+
+  # THE REAL RPS 
+
+    # def rps
+    #   c = ['r','p','s'].sample
+    #   puts "choose r, p or s"
+    #    u = gets
+    #   puts "comp chose #{c}"
+    #   if u==c 
+    #     puts "you tie "
+    #   elsif u=="r"&&c=="p"||u=="p"&&c=="s"||u=="s"&&c=="r"
+    #     puts 'you lose'
+    #   else 
+    #     puts "you win"
+      
+    #   end
+    # end  
+
+    # rps
+  
+    
+    
+      
 
 
 # HOLE 3: FIZZBUZZ
 # For numbers 1-100 print “FIZZ” if the number is divisible by 3, “BUZZ” if the number is divisible by 5, “FIZZBUZZ” if the number is divisible by both 3 and 5 otherwise print the number.
 
+      # def fizbuzz(a)
+      #   a.each {|i| 
+      #     if i % 15 == 0
+      #       puts "FizzBuzz"
+      #     elsif i % 3 == 0 
+      #       puts "Fizz"
+      #     elsif i % 5 == 0
+      #       puts "Buzz"
+      #     else 
+      #       puts i
+      #     end }
+      # end 
+
+      # my_arr = [*1..100]
+      # fizbuzz(my_arr)
+     
+
+  
 # HOLE 4: Multiples up to a given value
 # The method takes in a number and a max value then finds all multiples of the number up to the max value.
+
+
+
 # HOLE 5: Caesar Cipher
 # Take in a string and an offset, encrypt the string by moving letters over by the offset and return the encrypted string (e.g “ab”, 3 would return “de”). When you hit Z loop back to A.
 # HOLE 6: String Counter
