@@ -7,11 +7,13 @@
 #   Example: "I love this code", "This code loves me" Total Chars: 27 Chars In Common: 7 Solution: 27 / 7 = 3
 
 def lov(x,y)
-  t = x.length + y.length 
-  c = (x.chars & y.chars).size
-  s = t / s
+  a = x.strip
+  b = y.strip 
+  t = a.size + b.size 
+  c = a.count(b)
+  s = t / c
 
 end 
 
-lov("I love this code", "This code loves me")
+ lov("I love this code", "This code loves me")
 

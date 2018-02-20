@@ -6,7 +6,7 @@
 
 #23
 def multiples(x,y)
-  (x..y).step(x) { |n| puts n }
+  (x..y).step(x) { |n| p n }
 end
 
 
