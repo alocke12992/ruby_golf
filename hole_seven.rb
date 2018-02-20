@@ -3,7 +3,7 @@
 #Each inner array contains a pair, 
 #the method then mixes up the pairs and 
 #returns a new array with the pairs mixed up.
-# 52 characters 
+
 
 def mix(x)
   i = x.flatten.shuffle

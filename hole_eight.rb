@@ -12,8 +12,11 @@ def lov(x,y)
   t = a.size + b.size 
   c = a.count(b)
   s = t / c
-
+  puts "The total characters: #{t}"
+  puts "Common characters: #{c}"
+  puts "Total characters (#{t}) divided by common (#{c}) equals:"
 end 
 
  lov("I love this code", "This code loves me")
+
 

@@ -1,86 +1,91 @@
-# HOLE 1: Sum an array
-# Create a method that takes in an array sums the array then returns the array and the sum.
+# 1 
 
-# def sum(i) 
-#   i.inject(:+)
-# end 
-# my_arr = [2,4]
-# puts sum(my_arr)
+def sum(i) 
+  i.inject(:+)
+end 
+my_arr = [2,4]
+puts sum(my_arr) 
 
 
-# HOLE 2: Rock paper scissors
-# Takes a user input the computer randomly chooses and the winner is output to the screen.
+# 2
 
-# CHEATING METHO (HINT - Check Devin's submission)
-
-    # def rps_cheat
-    #   c = ['r','p','s'].sample
-    #   w =['Win','Lose','Tie'].sample
-    #   puts "choose r, p or s"
-    #   gets
-    #   puts w
-    # end  
-
-    # rps_cheat
-
-  # THE REAL RPS 
-
-    # def rps
-    #   c = ['r','p','s'].sample
-    #   puts "choose r, p or s"
-    #    u = gets
-    #   puts "comp chose #{c}"
-    #   if u==c 
-    #     puts "you tie "
-    #   elsif u=="r"&&c=="p"||u=="p"&&c=="s"||u=="s"&&c=="r"
-    #     puts 'you lose'
-    #   else 
-    #     puts "you win"
+def rps
+      c = ['r','p','s'].sample
+      puts "choose r, p or s"
+       u = gets
+      puts "comp chose #{c}"
+      if u==c 
+        puts "you tie "
+      elsif u=="r"&&c=="p"||u=="p"&&c=="s"||u=="s"&&c=="r"
+        puts 'you lose'
+      else 
+        puts "you win"
       
-    #   end
-    # end  
+      end
+    end  
 
-    # rps
-  
-    
-    
-      
+#3 
+
+      def fizbuzz(a)
+        a.each {|i| 
+          if i % 15 == 0
+            puts "FizzBuzz"
+          elsif i % 3 == 0 
+            puts "Fizz"
+          elsif i % 5 == 0
+            puts "Buzz"
+          else 
+            puts i
+          end }
+      end 
+
+#4 
+
+def multiples(x,y)
+  (x..y).step(x) { |n| p n }
+end
 
 
-# HOLE 3: FIZZBUZZ
-# For numbers 1-100 print “FIZZ” if the number is divisible by 3, “BUZZ” if the number is divisible by 5, “FIZZBUZZ” if the number is divisible by both 3 and 5 otherwise print the number.
+#5 
 
-      # def fizbuzz(a)
-      #   a.each {|i| 
-      #     if i % 15 == 0
-      #       puts "FizzBuzz"
-      #     elsif i % 3 == 0 
-      #       puts "Fizz"
-      #     elsif i % 5 == 0
-      #       puts "Buzz"
-      #     else 
-      #       puts i
-      #     end }
-      # end 
-
-      # my_arr = [*1..100]
-      # fizbuzz(my_arr)
-     
-
-  
-# HOLE 4: Multiples up to a given value
-# The method takes in a number and a max value then finds all multiples of the number up to the max value.
+def cipher(s,n)
+  a = [*?a..?z] 
+  puts s.split('').map { |i| a[a.index(i.downcase) + n] }.join('')
+end
 
 
 
+#6 
 
-# HOLE 5: Caesar Cipher
-# Take in a string and an offset, encrypt the string by moving letters over by the offset and return the encrypted string (e.g “ab”, 3 would return “de”). When you hit Z loop back to A.
-# HOLE 6: String Counter
-# Given a string and a sub string count the number of times the substring occurs in the string and print the number to the console.
-# HOLE 7: Mixed pairs
-# The method takes in an array of arrays. Each inner array contains a pair, the method then mixes up the pairs and returns a new array with the pairs mixed up.
-# HOLE 8: Love Test
-# Create a method that takes in 2 strings and counts the total number of characters in common. Divide the total number of chars by the number in common. Spaces do not count. Capitols are not the same as lowercase Example: "I love this code", "This code loves me" Total Chars: 27 Chars In Common: 7 Solution: 27 / 7 = 3
-# HOLE 9: Shopping List
-# Takes in a list of strings. Program sorts the list non case sensitive, removes duplicates and returns as hash using position in the list as priority.
+def count(x,y)
+  x.scan(/(?=#{y})/).count
+end
+
+#7 
+
+def mix(x)
+  i = x.flatten.shuffle
+  y = []
+  x.length.times { y << i.pop(2) }
+  y
+end
+
+#8 
+
+def lov(x,y)
+  a = x.strip
+  b = y.strip 
+  t = a.size + b.size 
+  c = a.count(b)
+  s = t / c
+end 
+
+
+#9 
+
+def shop(n)
+  x = 1
+  l = []
+  n.downcase.split(" ").uniq.sort.each { |i| l << Hash[x += 1, i] }
+ l
+end

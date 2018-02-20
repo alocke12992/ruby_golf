@@ -12,5 +12,5 @@ end
 
 puts count("aaaaaaaaaaaaaaaaaaaaaa","aa")
 
-#Thanks stack overflow! 
+
 
